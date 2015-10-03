@@ -1,0 +1,220 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mattronix</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    
+    <body>
+        <!-- navbar --> 
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <img src="/images/logo-small.png" alt="...">
+                <a href="/index.html" class="btn btn-default" role="button">Home</a>
+                <a href="/about.html" class="btn btn-default" role="button">About</a>
+                <a href="/gpg.html" class="btn btn-default" role="button">PGP Key</a>
+                <a href="/contact.html" class="btn btn-default" role="button">Contact</a>
+                <a href="/downloads.html" class="btn btn-default" role="button">Downloads</a>
+                <a href="/server.html" class="btn btn-danger" role="button">Specs</a>
+            </div>
+        </nav>
+        <!-- endnavbar -->
+
+        <div class="container" style="padding-top:80px">
+            <div class="row-fluid">
+
+                <!-- body -->
+  <!-- Page Content -->
+    <div class="container" align="center">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> Technical Specifications
+                    <small> My personal IT environment. </small>
+                </h1>
+            </div>
+        </div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/R210II.png" alt="...">
+      <div class="caption">
+        <h3>Server 1 </h3>
+        <p> My primary Server used for my main applications and testing.</p>
+
+  <!-- Table -->
+  <table class="table">
+
+    <tr>
+     <td>
+        <b> RAM: 
+     </td>
+     <td>
+        32 GB
+     </td>
+   </tr>
+
+   <tr>
+    <td>
+       <b> HDD: 
+    </td>
+    <td>
+       2x 3TB Raid-Z1 (1x Western Digital RED 3TB + 1x Hitach 3TB) 
+    </td>
+  </tr>
+
+  <tr>
+   <td>
+      <b> CPU: 
+   </td>
+   <td>
+     Intel Xeon E3-1240v2 Processor (3.4GHz, 4C/8T, 8M Cache, 69W Turbo)  
+   </td>
+ </tr>
+
+ <tr>
+  <td>
+     <b> OS: 
+  </td>
+  <td>
+    SmartOS
+  </td>
+</tr>
+
+ <tr>
+  <td>
+     <b> Services: 
+  </td>
+  <td>
+    <ul>
+       <li>Owncloud - File Storage</li>
+       <li>Bacula Director- Backup Management, Backup Lifecycle Management and Backup Retenion Mangement.</li>
+       <li>OpenVPN - Secures my traffic. </li>
+       <li>CJDNS - Secure Mesh VPN and Routing.</li>
+       <li>Quassel - My IRC Client. </li>
+    </ul>
+  </td>
+</tr>
+
+
+  </table>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/images/g8.jpg" alt="...">
+      <div class="caption">
+        <h3>Homenet</h3>
+        <p>My Backup server used for backup storage and backup indexing.</p>
+
+
+
+        <!-- Table -->
+        <table class="table">
+
+          <tr>
+           <td>
+              <b> RAM: 
+           </td>
+           <td>
+             2 GB
+           </td>
+         </tr>
+
+         <tr>
+          <td>
+             <b> HDD: 
+          </td>
+          <td>
+             3x 1TB Raid-Z1 (Western Digital RED 1TB) 
+             1X 1TB Global Hot Spare (Western Digital RED 1TB)
+          </td>
+        </tr>
+
+        <tr>
+         <td>
+            <b> CPU: 
+         </td>
+         <td>
+           Intel Celeron G1610
+         </td>
+       </tr>
+
+       <tr>
+        <td>
+           <b> OS: 
+        </td>
+        <td>
+          SmartOS
+        </td>
+      </tr>
+
+       <tr>
+        <td>
+           <b> Services: 
+        </td>
+        <td>
+          <ul>
+             <li>Owncloud - File Storage</li>
+             <li>Bacula Storage Daemon - Backups are stored on this node..</li>
+             <li>CJDNS - Secure Mesh VPN and Routing.</li>
+          </ul>
+        </td>
+      </tr>
+
+
+        </table>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+         
+
+
+
+
+        <!-- /.row -->
+        
+        
+            <!-- endbody --> 
+
+            <script src="scripts/vendor.js"></script>
+            <script src="scripts/main.js"></script>
+            <!-- build:js scripts/vendor/bootstrap.js -->
+            <script src="bower_components/bootstrap/js/affix.js"></script>
+            <script src="bower_components/bootstrap/js/alert.js"></script>
+            <script src="bower_components/bootstrap/js/dropdown.js"></script>
+            <script src="bower_components/bootstrap/js/tooltip.js"></script>
+            <script src="bower_components/bootstrap/js/modal.js"></script>
+            <script src="bower_components/bootstrap/js/transition.js"></script>
+            <script src="bower_components/bootstrap/js/button.js"></script>
+            <script src="bower_components/bootstrap/js/popover.js"></script>
+            <script src="bower_components/bootstrap/js/carousel.js"></script>
+            <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+            <script src="bower_components/bootstrap/js/collapse.js"></script>
+            <script src="bower_components/bootstrap/js/tab.js"></script>
+            <!-- endbuild -->
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+ {% include '_header.twig' %}
+
+
+    <div class="container" align="center">
+        <div class="row">
+        {% if search is defined %}
+            <h1>
+                {{ __('Search results for <b> %search% </b>.', { '%search%': search|escape }) }}
+            </h1>
+	{% else %}
+             <h1 class="page-header"> Header
+
+                    <small> Text Small  </small>
+             </h1>
+        {% endif %}
+        </div>
+    </div>
+
+
+
+    <div align="center"> 
+{% for record in records %}
+<div class="blog-post-mattronix" align="left"> 
+<a href="blog/{{record.slug}}"> <img src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
+<h3> <a href="blog/{{record.slug}}"> {{record.title}} </a></h3>
+{{record.body|excerpt(300)}}
+<h4> Created by:   {{record.user.displayname}} </h4>
+<hr>
+</div>
+{% endfor %}
+
+</div>
+
+
+
+ {% include '_footer.twig' %}
+
+
+
+
+
+
+
+
+

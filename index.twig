@@ -1,0 +1,37 @@
+ {% include '_header.twig' %}
+
+
+        <div class="container"style="padding-top:0px">
+        <div class="jumbotron">
+          <h1>{{ theme.welcome  }} </h1>
+           <p>{{ theme.slogan }} <p> 
+        </div>
+      
+
+
+
+<div class="row-fluid">
+
+
+{% setcontent blocks = 'blocks' orderby 'ordernum' %}
+
+{% for block in blocks %}
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ thumbnail(block.image, 300, 200)}}" alt="..." width="200" height="300"  >
+      <div class="caption">
+        <h3>{{ block.title }}</h3>
+        <p><a href="{{ block.url }}" class="btn btn-danger" role="">{{ block.buttontext}}</a> <p>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+
+
+</div>
+
+
+
+{% include '_footer.twig' %}

@@ -1,0 +1,17 @@
+            <section class="top-bar-section">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <img src="{{paths.theme}}/images/logo-small.png" alt="..." >
+
+                    {{ menu('main', '_sub_menu.twig') }}
+
+      </div>
+    </nav>
+
+            </section>
+        <div class="container" style="padding-top:80px">
+
+
+
+                    {% include '_sub_searchbox.twig' %}
+

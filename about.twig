@@ -1,0 +1,30 @@
+{% include '_header.twig' %}
+
+
+    <body>
+        <div class="container" style="padding-top:00px">
+            <div class="row-fluid">
+                <div align="center" class="col-md-2">
+                    <img src="{{ app.paths.files }}{{ page.image }}" class="img-responsive" alt="..." width="210" height="300">
+
+		   {% for image in page.imagelist %}
+		   
+                   <div>	
+		    <img src="{{ app.paths.files }}{{ image.filename }}" class="img-responsive" alt="..." width="220" height="190">
+		   </div>	
+
+                   {% endfor %}
+
+                </div>
+                <div class="col-md-10">
+
+		
+		{{ page.body }}
+		
+
+		</div>
+
+
+    </body>
+{% include '_footer.twig' %}
+

@@ -1,0 +1,17 @@
+{% macro display_menu_item(item, loop) %}
+    {% from _self import display_menu_item %}
+
+       <a href="{{ item.link }}" {% if item.title is defined %}title='{{ item.title|escape }}'{% endif %}
+            class='btn btn-{% if item|current %}danger{% else %}default{% endif %}'>
+            {% if item.label is defined %}{{item.label}}{% else %} - {% endif %}
+       </a>
+
+{% endmacro %}
+
+{% from _self import display_menu_item %}
+
+{% for item in menu %}
+    {% if item.label is defined %}
+        {{ display_menu_item(item, loop) }}
+    {% endif %}
+{% endfor %}

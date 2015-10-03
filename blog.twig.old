@@ -1,0 +1,65 @@
+ {% include '_header.twig' %}
+
+
+    <div class="container" align="center">
+
+        <!-- Page Header -->
+        <div class="row">
+             <h1 class="page-header"> {{ record.title }}
+	     {% if record.title == "" %} 
+		My Blog 
+	     {% endif %}
+
+                    <small> {{ record.caption }} {% if record.caption == "" and record.body == ""  %} Welcome to my Blog {% endif %}   </small>
+                </h1>
+            </div>
+        </div>
+    <div align="center"> 
+
+
+{% if record.image != "" %}
+	
+<img src="{{ thumbnail(record.image, 600, 400)}}"> </img>
+
+{% endif %}
+
+ {{ record.body }}
+
+{% if record.body == "" %}
+
+{% setcontent blogposts = 'Blog Posts' %}
+
+
+{% for post in blogposts  %}
+
+
+<div class="blog-post-mattronix" align="left"> 
+<a href="blog/{{post.slug}}"> <img src="{{ thumbnail(post.image, 300, 200)}}" alt="Smiley face" > </a>
+<h3> <a href="blog/{{post.slug}}"> {{post.title}} </a></h3>
+{{post.body|excerpt(300)}}
+
+<h4> Created by:   {{post.user.displayname}} </h4>
+
+
+
+<hr>
+
+</div>
+
+
+{% endfor %}
+
+    </div>
+{% endif %}
+
+
+ {% include '_footer.twig' %}
+
+
+
+
+
+
+
+
+
