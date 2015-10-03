@@ -1,0 +1,31 @@
+.blog-post-mattronix h4 {
+display: block;
+}
+
+.blog-post-mattronix a {
+display: block;
+}
+
+.blog-post-mattronix {
+
+clear: both;
+}
+
+.blog-post-mattronix img {
+float: left;
+padding-right: 10px;
+}
+
+.submitter-mattronix {
+
+padding-left: 0px !important;
+padding-right: 0px !important;
+
+}
+
+.form-item-mattronix{
+
+margin-top: 10px;
+
+}
+
