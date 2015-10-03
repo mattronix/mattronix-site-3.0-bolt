@@ -1,21 +1,22 @@
  {% include '_header.twig' %}
 
+<div class="container"> 
 
-    <div class="container" align="center">
+<h1>{{ record.title  }}</h1>    
+<h4> By {{ record.user.displayname }} </h4>
+<hr> 
 
-        <!-- Page Header -->
-        <div class="row">
-             <h1 class="page-header"> {{ record.title }}
-                    <small> {{ record.caption }}  </small>
-                </h1>
-            </div>
-        </div>
-    <div align="center"> 
-<img src="{{ thumbnail(record.image, 500, 300)}}"> </img>
+	<p><span class="glyphonicon glyphicon glyphicon-time"> Posted: {{ record.values.datepublish }} </span></p>
+	<p><span class="glyphonicon glyphicon glyphicon-refresh"> Updated: {{ record.values.datechanged}} </span></p>
 
+	<hr>
+  <img src="{{ thumbnail(record.image, 900, 300)}}"> </img>
+
+<hr>
  {{ record.body }}
 
-    </div>
+</div>
+
 
 
 
