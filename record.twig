@@ -3,19 +3,20 @@
 <div class="container well"> 
 
 <h1>{{ record.title  }}</h1>    
-<h4> By {{ record.user.displayname }} </h4>
+
 <hr> 
 
-	<p><span class="mdi-action-schedule"> Posted: {{ record.values.datepublish }} </span></p>
-	<p><span class="mdi-action-autorenew"> Updated: {{ record.values.datechanged}} </span></p>
 
-	<hr>
+
   <div id="record-content" style="margin:4px" width:100%; height:100%>
   <img src="{{ thumbnail(record.image, 1000, 300)}}" class="img-responsive" > </img>
   </div>
 
 <hr>
  {{ record.body }}
+{{ __('Written by <em>%name%</em> on %date%',{ '%name%': record.user.displayname, '%date%': recdate }) }} <br>
+
+       {% include '_sub_taxonomylinks.twig' with {record: record} %}
 
 </div>
 
