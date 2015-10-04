@@ -1,3 +1,12 @@
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: RED;
+    border-color: Red;
+}
+
 .blog-post-mattronix h4 {
 display: block;
 }
@@ -46,4 +55,9 @@ margin-top: 10px;
     color: white;
     background-image: none;
   }
+}
+
+
+.footer {
+    background-color: #D32F2F !important;
 }

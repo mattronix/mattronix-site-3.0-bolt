@@ -5,9 +5,6 @@
 
         <!-- Page Header -->
         <div class="row">
-             <h1 class="page-header"> Downloads
-                    <small> Cool Stuff. </small>
-                </h1>
             </div>
         </div>
         <!-- /.row -->
@@ -15,26 +12,30 @@
         <!-- contactinfo --> 
     <div align="center"> 
 
-<div class="panel panel-default">
+<div class="container">
+<div class="well well-sm">
+
+
   <!-- Default panel contents -->
   <div class="panel-heading">Download List: </div>
 
+</div>
+
   <!-- Table -->
   <table class="table">
-    <tr>
     {% setcontent downloads = 'downloads'  %}
     {% for download in downloads %}
-     <td>
+<div class="well">
+
+
        <b>{{ download.title  }} </b>  <a href="{{ download.downloadlink  }}">Download</a> 
-     </td>
+</div>
     {% endfor  %}
-   </tr>
 
 
   </table>
  
 </div>
-
 
    <!-- Page Header -->
         <!-- /.row -->
