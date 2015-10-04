@@ -1,0 +1,19 @@
+{% if record.taxonomy is defined %}
+    {% for type, values in record.taxonomy %}
+        <em>
+        {% if values|length < 2 %}
+            {{ config.get('taxonomy')[type].singular_name }}:
+        {% else %}
+            {{ config.get('taxonomy')[type].name }}:
+        {% endif %}
+        </em>
+	<ul class="list-inline">
+        {% for link, value in values %}
+          <li>  <a href="{{ link }}">{{ value }}</a> <li>{% if not loop.last %},{% endif %}
+        {% else %}
+            {{ __('none') }}
+        {% endfor %}
+        {% if not loop.last %} - {% endif %}
+    {% endfor %}
+	</ul>
+{% endif %}

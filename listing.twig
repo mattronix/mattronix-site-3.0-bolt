@@ -36,7 +36,7 @@
 
     <div class="blog-post-mattronix well" align="left" style="min-height: 240px;"> 
       {% if record.image !="" %}
-        <a href="{{record.link}}"> <img class="img-responsive" src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
+        <a href="{{record.link}}"> <img style="display: block; margin-left: auto" class="img-responsive" src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
       {% else %} 
         <a href="{{record.link}}"> <img class="img-responsive" src="holder.js/310x200?text=No Image&bg=fff&outline=yes" alt="{{ record.title }}" > </a>
 
