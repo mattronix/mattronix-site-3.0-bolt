@@ -1,32 +1,31 @@
-{% include '_header.twig' %}
+ {% include '_header.twig' %}
+{% setcontent blocks = 'blocks' orderby 'ordernum' %}
 
 
-    <body>
-        <div class="container well" style="padding-top:00px">
-            <div class="row-fluid" style="padding-top: 10px">
-                <div align="center" class="col-md-2">
-                    <img src="{{ app.paths.files }}{{ page.image }}" class="img-responsive img-circle" alt="..." width="210" height="300">
+<div class="row">
 
-		   {% for image in page.imagelist %}
-		   
-                   <div>	
-		    <img src="{{ app.paths.files }}{{ image.filename }}" class="img-responsive" alt="..." width="220" height="190">
-		   </div>	
+  <div class="col-md-2 col-md-offset-1">
+     <div class="col-md-12 well">
+	<!--Sidebar Content -->
 
-                   {% endfor %}
+     </div>
+     <div class="col-md-12 panel-danger panel">
+	<h3> Blog Posts: </h3>
+	<hr>
 
-                </div>
-                <div class="col-md-10" >
+     </div>
+  </div>
 
-		
-		{{ page.body }}
-		
+  <div class="col-md-8">
+    <!--Homepage Content -->
+      <div class="col-md-12 well">
+	<div align="middle">
+	<h1> Content Coming Soon </h1> 
+	</div>
+      </div>
+  </div>
 
-		</div>
-	      </div>
-	    </div>
+</div>
 
 
-    </body>
 {% include '_footer.twig' %}
-

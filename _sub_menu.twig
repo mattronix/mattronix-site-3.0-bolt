@@ -1,6 +1,4 @@
-           <!-- Navbar
-================================================== -->
-
+<!-- Navbar ================================================== -->
                         <div class="bs-component">
                             <div class="navbar navbar-danger">
                                 <div class="navbar-header">
@@ -12,8 +10,6 @@
                                     <a class="navbar-brand" href="https://mattronix.nl">MATTRONIX</a>
                                 </div>
                                 <div class="navbar-collapse collapse navbar-warning-collapse">
-
-
                       <ul class="nav navbar-nav">
                 {% macro display_menu_item(item, loop) %}
                   {% from _self import display_menu_item %}
@@ -21,7 +17,6 @@
                     <a href="{{ item.link }}" {% if item.title is defined %}title='{{ item.title|escape }}'{% endif %}'>
                     {% if item.label is defined %}{{item.label}}{% else %} - {% endif %} </a></li>
                 {% endmacro %}
-
                 {% from _self import display_menu_item %}
                   {% for item in menu %}
                   {% if item.label is defined %}
@@ -29,19 +24,10 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-
-
 		{% include '_sub_searchbox.twig' %}
-
-
-
-                                    <!-- <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="javascript:void(0)">Link</a></li>
-                                        </li>
-                                    </ul> //-->
                                 </div>
                             </div>
-                        </div><!-- /example -->
-
+                        </div>
+<!-- Navbar ================================================== -->
 
 

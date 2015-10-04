@@ -9,15 +9,15 @@
 
 
   <div id="record-content" style="margin:4px" width:100%; height:100%>
-        {% if record.image !="" %}
-        <img class="img-responsive" src="{{ thumbnail(record.image, 600, 300)}}" alt="{{ record.title }}" >
-      {% else %}
-        <img class="img-responsive" src="holder.js/600x300?text=No Image&bg=fff&outline=yes" alt="{{ record.title }}" > 
-      {% endif %}
+
+    <img class="img-responsive" src="{% if record.image !="" %}{{ thumbnail(record.image, 1000, 310) }}{% else %}holder.js/300x210?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}"
+
   </div>
 
 <hr>
  {{ record.body }}
+
+{% set recdate = record.datepublish|localdate("%A %B %e, %Y") %}
 {{ __('Written by <em>%name%</em> on %date%',{ '%name%': record.user.displayname, '%date%': recdate }) }} <br>
 
        {% include '_sub_taxonomylinks.twig' with {record: record} %}

@@ -1,3 +1,4 @@
+{% set recdate = record.datepublish|localdate("%A %B %e, %Y") %}
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,10 +17,8 @@
     <link href="{{paths.theme}}/styles/css/material.min.css" rel="stylesheet">
     <link href="{{paths.theme}}/styles/css/ripples.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{paths.theme}}/styles/mattronix.css">
-
   </head>
-
   <body>
     {{ menu('main', '_sub_menu.twig') }}
-<div id="wrap">
+
 
