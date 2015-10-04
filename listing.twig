@@ -26,23 +26,26 @@
             {% set records = records|order(app.config.get('general/listing_sort')) %}
 
      {% else %}
-        <h1 class="page-header"> Header
-        <small> Text Small  </small>
+        <h1 class="page-header">  {{ contenttype  }}
         </h1>
      {% endif %}
     </div>
 
 
-
-
   {% for record in records %}
 
     <div class="blog-post-mattronix well" align="left" style="min-height: 240px;"> 
-      <a href="{{record.link}}"> <img src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
+      {% if record.image !="" %}
+        <a href="{{record.link}}"> <img class="img-responsive" src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
+      {% else %} 
+        <a href="{{record.link}}"> <img class="img-responsive" src="holder.js/310x200?text=No Image&bg=fff&outline=yes" alt="{{ record.title }}" > </a>
+
+
+ {% endif %}
       <h3> <a href="{{record.link}}"> {{record.title}} </a></h3>
       {{record.body|excerpt(300)}}
-      <h4> Created by:   {{record.user.displayname}} </h4>     
       <hr>
+      <h4> Created by:   {{record.user.displayname}} </h4>     
       {% include '_sub_taxonomylinks.twig' with {record: record} %}
 
     </div>
