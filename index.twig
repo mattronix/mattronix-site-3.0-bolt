@@ -2,17 +2,16 @@
 {% setcontent blocks = 'blocks' orderby 'ordernum' %}
 
 
+
 <div class="row">
 
   <div class="col-md-2 col-md-offset-1">
      <div class="col-md-12 well">
 	<!--Sidebar Content -->
-
-     </div>
-     <div class="col-md-12 panel-danger panel">
-	<h3> Blog Posts: </h3>
-	<hr>
-
+	<div align="middle">
+	<a href="{{ record.link }}" >  <img class="img-responsive img-circle" src="{{thumbnail(record.image,200,200)}}" alt="{{ record.title }}" </img> </a>
+<h3> Welcome to my Site! </h3>
+        </div>
      </div>
   </div>
 
@@ -27,5 +26,14 @@
 
 </div>
 
-
+<div class="row">
+  <div class="col-md-2 col-md-offset-1">
+     <div class="col-md-12 well">
+	<h3> Blog Posts: </h3>
+	<hr>
+ 	  {% include '_sub_blog_list.twig' %}
+   </div>
+  </div>
+ </div>
+ 
 {% include '_footer.twig' %}
