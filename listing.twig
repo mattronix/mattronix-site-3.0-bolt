@@ -16,10 +16,12 @@
 
 
 
+
   {% for record in records %}
-    <div class="blog-post-mattronix" align="left"> 
-      <a href="blog/{{record.slug}}"> <img src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
-      <h3> <a href="blog/{{record.slug}}"> {{record.title}} </a></h3>
+
+    <div class="blog-post-mattronix well" align="left" style="min-height: 240px;"> 
+      <a href="{{record.link}}"> <img src="{{ thumbnail(record.image, 300, 200)}}" alt="{{ record.title }}" > </a>
+      <h3> <a href="{{record.link}}"> {{record.title}} </a></h3>
       {{record.body|excerpt(300)}}
       <h4> Created by:   {{record.user.displayname}} </h4>
       <hr>

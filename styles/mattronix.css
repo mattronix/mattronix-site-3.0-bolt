@@ -29,3 +29,21 @@ margin-top: 10px;
 
 }
 
+
+
+
+.dark-primary-color    { background: #D32F2F; }
+.default-primary-color { background: #F44336; }
+.light-primary-color   { background: #FFCDD2; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #03A9F4; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+.navbar-custom { 
+    background-color: #D32F2F;
+    color: white;
+    background-image: none;
+  }
+}
