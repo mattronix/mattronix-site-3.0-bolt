@@ -16,8 +16,10 @@
 <div align="left">
  {{ record.body }}
 
+<hr>
 {% set recdate = record.datepublish|localdate("%A %B %e, %Y") %}
 {{ __('Written by <em>%name%</em> on %date%',{ '%name%': record.user.displayname, '%date%': recdate }) }} <br>
+
 
        {% include '_sub_taxonomylinks.twig' with {record: record} %}
 </div>

@@ -1,6 +1,6 @@
 {% if record.taxonomy is defined %}
     {% for type, values in record.taxonomy %}
-        <em>
+        <em class="taxonomy-list-mattronix">
         {% if values|length < 2 %}
             {{ config.get('taxonomy')[type].singular_name }}:
         {% else %}
