@@ -2,6 +2,7 @@
 *.diff
 *.err
 *.orig
+*.old
 *.log
 *.rej
 *.swo

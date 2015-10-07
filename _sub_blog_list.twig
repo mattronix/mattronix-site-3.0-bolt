@@ -9,9 +9,10 @@
 <a  class="pull-left" href="{{ post.link }}">  <img class="img-responsive" src="{% if post.image !="" %}{{ thumbnail(post.image, 42, 42) }}{% else %}holder.js/42x42?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}" </img> </a>
     <div class="media-body">
       <a href="{{ post.link }}"><h4 class="media-heading">{{ post.title }}</h4></a>
-      {{record.body|excerpt(70)}}
+      {{post.body|excerpt(30)}}
     </div>
   </li>
+   <hr>
 </ul> 
 
 {% endfor %}

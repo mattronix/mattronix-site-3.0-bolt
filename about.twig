@@ -5,7 +5,7 @@
         <div class="container well" style="padding-top:00px">
             <div class="row-fluid" style="padding-top: 10px">
                 <div align="center" class="col-md-2 col-xs-4">
-                    <img src="{{ app.paths.files }}{{ page.image }}" class="img-responsive img-circle" alt="..." width="210" height="300">
+                    <img src="{{ thumbnail(page.image, 200,200) }}" class="img-responsive img-circle" alt="...">
 
 		   {% for image in page.imagelist %}
 		   
