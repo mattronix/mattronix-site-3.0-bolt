@@ -26,7 +26,7 @@
   {% for record in records %}
     <div class="blog-post-mattronix well" align="left" style="min-height: 240px;"> 
 	<div class="">
-    <a href="{{ record.link }}">  <img class="img-responsive" src="{% if record.image !="" %}{{ thumbnail(record.image, 300, 210) }}{% else %}holder.js/300x210?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}" </img> </a>
+    <a href="{{ record.link }}">  <img class="img-responsive" src="{% if record.image !="" %}{{ thumbnail(record.image, 400, 210) }}{% else %}holder.js/300x210?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}" </img> </a>
 	</div>
 
     
