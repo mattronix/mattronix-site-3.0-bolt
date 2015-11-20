@@ -6,7 +6,7 @@
 
 <ul class="media-list">
   <li class="media">
-<a  class="pull-left" href="{{ post.link }}">  <img class="img-responsive" src="{% if post.image !="" %}{{ thumbnail(post.image, 130, 70) }}{% else %}holder.js/42x42?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}" </img> </a>
+<a  class="pull-left" href="{{ post.link }}">  <img class="img-responsive" src="{% if post.image !="" %}{{ thumbnail(post.image, 100, 50) }}{% else %}holder.js/100x50?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ post.title }}" </img> </a>
     <div class="media-body">
       <a href="{{ post.link }}"><h4 class="media-heading">{{ post.title }}</h4></a>
       {{post.caption|excerpt(50)}}

@@ -6,12 +6,13 @@
 
 <ul class="media-list">
   <li class="media">
-<a  class="pull-left" href="{{ project.link }}">  <img class="img-responsive" src="{% if project.image !="" %}{{ thumbnail(project.image, 42, 42) }}{% else %}holder.js/42x42?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ project.title }}" </img> </a>
+<a  class="pull-left" href="{{ project.link }}">  <img class="img-responsive" src="{% if project.image !="" %}{{ thumbnail(project.image, 100, 50) }}{% else %}holder.js/100x50?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ project.title }}" </img> </a>
     <div class="media-body">
       <a href="{{ project.link }}"><h4 class="media-heading">{{ project.title }}</h4></a>
       {{project.caption|excerpt(50)}}
     </div>
   </li>
+   <hr>
 </ul> 
 
 {% endfor %}
