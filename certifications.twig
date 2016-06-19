@@ -1,0 +1,47 @@
+ {% include '_header.twig' %}
+ <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> {{ contenttype  }}
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+
+  {% for record in records %}
+
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+
+
+        <div class="">
+    <a href="{{ record.link }}">  <img class="img-responsive" src="{% if record.image !="" %}{{ thumbnail(record.image, 700, 400) }}{% else %}holder.js/700x200?text=No Image&bg=fff&outline=yes"{% endif  %}" alt="{{ record.title }}" </img> </a>
+        </div>
+
+
+
+                </a>
+                <h3>
+                    <a href="{{record.link}}"> {{record.title}} </a>
+                </h3>
+                <p> {{ record.caption }} <p>
+            </div>
+    {% endfor %}
+
+        <!-- /.row -->
+
+
+        <hr>
+
+
+    </div>
+    <!-- /.container -->
+
+
+ 
+{% include '_footer.twig' %}
