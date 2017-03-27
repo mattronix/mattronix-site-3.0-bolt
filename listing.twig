@@ -1,5 +1,5 @@
 {% set recdate = record.datepublish|localdate("%A %B %e, %Y") %}
- {% include '_header.twig' %}
+ {% include 'partials/_header.twig' %}
   <div class="container" align="center">
     <div class="row">
       {% if search is defined %}
@@ -33,13 +33,13 @@
       <h4> <a href="{{record.link}}"> {{record.title}} </a></h4>
 {{ __('Written by <em>%name%</em> on %date%',{ '%name%': record.user.displayname, '%date%': recdate }) }}  <br>
       <br> {{record.body|excerpt(300)}} <br>
-      {% include '_sub_taxonomylinks.twig' with {record: record} %}
+      {% include 'partials/_sub_taxonomylinks.twig' with {record: record} %}
     </div>
   {% endfor %}
   </div>
 
 <div align="center"> {{ pager() }} </div>
- {% include '_footer.twig' %}
+ {% include 'partials/_footer.twig' %}
 
 
 

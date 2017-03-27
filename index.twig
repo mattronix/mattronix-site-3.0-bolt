@@ -1,4 +1,4 @@
- {% include '_header.twig' %}
+ {% include 'partials/_header.twig' %}
 {% setcontent blocks = 'blocks' orderby 'ordernum' %}
 <div class="container">
 <div class="well">
@@ -14,18 +14,18 @@
       <div class="col-md-12 well">
 	<h5> Latest blog posts: </h5>
 	<hr>
-        {% include '_sub_blog_list.twig' %}
+        {% include 'partials/_sub_blog_list.twig' %}
       </div>
     </div>
     <div class="col-md-6"> 
       <div class="col-md-12 well">
 	<h5> Latest Projects: </h5>
 	<hr>
-        {% include '_sub_projects_list.twig' %}
+        {% include 'partials/_sub_projects_list.twig' %}
       </div>
     </div>
 </div>
 </div>
 
  
-{% include '_footer.twig' %}
+{% include 'partials/_footer.twig' %}
